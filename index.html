@@ -4,13 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background: #E6E6E6;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation li {
+            list-style: none;
+        }
+
+        .navigation a {
+            margin: 2rem;
+            border-radius: 3px;
+            display: block;
+            background: #ffffff;
+            padding: 2rem;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .main section {
+            margin: 2rem;
+            border-radius: 3px;
+            background: #fff;
+            padding: 2rem;
+        }
+
+        .main h1 {
+            color: #4e4e4e;
+            font-size: 1.6em;
+        }
+
+        .main p {
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-<h1>CSS Tutorials</h1>
-<a href="https://tommykw.github.io/css-tutorials/">Home</a>
+    <nav>
+        <ul class="navigation">
+            <li><a href="https://tommykw.github.io/css-tutorials/">Home</a></li>
+            <li><a href="https://tommykw.github.io/css-tutorials/">Studies</a></li>
+            <li><a href="https://tommykw.github.io/css-tutorials/">Post</a></li>
+            <li><a href="https://tommykw.github.io/css-tutorials/">Latest</a></li>
+        </ul>
+    </nav>
 
-<ul>
-    <li><a href="/css-tutorials/css-outline/offset/css-outline-offset.html">outline offset</a></li>
-</ul>
+    <div class="main">
+        <section>
+            <h1>Tutorial 1</h1>
+            <p>css backgrounds</p>
+        </section>
+        <section>
+            <h1>Tutorial 2</h1>
+            <p>css borders</p>
+        </section>
+        <section>
+            <h1>Tutorial 3</h1>
+            <p>css box model</p>
+        </section>
+        <section>
+            <h1>Tutorial 4</h1>
+            <p>css colors</p>
+        </section>
+        <section>
+            <h1>Tutorial 5</h1>
+            <p>css comments</p>
+        </section>
+        <section>
+            <h1>Tutorial 6</h1>
+            <p>css flexbox</p>
+        </section>
+        <section>
+            <h1>Tutorial 7</h1>
+            <p>css grid</p>
+        </section>
+        <section>
+            <h1>Tutorial 8</h1>
+            <p>css height and width</p>
+        </section>
+    </div>
+    <footer></footer>
 </body>
 </html>
