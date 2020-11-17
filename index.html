@@ -11,7 +11,7 @@
 
         nav {
             position: sticky;
-            background: red;
+            background: blueviolet;
             top: 0;
             right: 0;
             left: 0;
@@ -37,6 +37,24 @@
         }
 
         .main {
+            display: grid;
+            grid-template-areas:
+                "a a b"
+                "a a b"
+                "a a c";
+            align-items: start;
+        }
+
+        .item1 {
+            grid-area: a;
+        }
+
+        .item2 {
+            grid-area: b;
+        }
+
+        .item3 {
+            grid-area: c;
         }
 
         .main section {
@@ -67,38 +85,54 @@
     </nav>
 
     <div class="main">
-        <section>
-            <h1>Tutorial 1</h1>
-            <p>css backgrounds</p>
-        </section>
-        <section>
-            <h1>Tutorial 2</h1>
-            <p>css borders</p>
-        </section>
-        <section>
-            <h1>Tutorial 3</h1>
-            <p>css box model</p>
-        </section>
-        <section>
-            <h1>Tutorial 4</h1>
-            <p>css colors</p>
-        </section>
-        <section>
-            <h1>Tutorial 5</h1>
-            <p>css comments</p>
-        </section>
-        <section>
-            <h1>Tutorial 6</h1>
-            <p>css flexbox</p>
-        </section>
-        <section>
-            <h1>Tutorial 7</h1>
-            <p>css grid</p>
-        </section>
-        <section>
-            <h1>Tutorial 8</h1>
-            <p>css height and width</p>
-        </section>
+        <div class="item1">
+            <section>
+                <h1>Tutorial 1</h1>
+                <p>css backgrounds</p>
+            </section>
+            <section>
+                <h1>Tutorial 2</h1>
+                <p>css borders</p>
+            </section>
+            <section>
+                <h1>Tutorial 3</h1>
+                <p>css box model</p>
+            </section>
+            <section>
+                <h1>Tutorial 4</h1>
+                <p>css colors</p>
+            </section>
+            <section>
+                <h1>Tutorial 5</h1>
+                <p>css comments</p>
+            </section>
+            <section>
+                <h1>Tutorial 6</h1>
+                <p>css flexbox</p>
+            </section>
+            <section>
+                <h1>Tutorial 7</h1>
+                <p>css grid</p>
+            </section>
+            <section>
+                <h1>Tutorial 8</h1>
+                <p>css height and width</p>
+            </section>
+        </div>
+
+        <div class="item2">
+            <section>
+                <h1>Studies</h1>
+                <p>css study</p>
+            </section>
+        </div>
+
+        <div class="item3">
+            <section>
+                <h1>Post</h1>
+                <p>css margin</p>
+            </section>
+        </div>
     </div>
     <footer></footer>
 </body>
