@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
     <style>
         body {
             background: #E6E6E6;
+        }
+
+        @keyframes fadeout {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #myNav.hidden {
+            animation: fadeout 0.5s linear;
+            opacity: 0;
+        }
+
+        #myNav.visible {
+            animation: fadein 0.5s linear;
+            opacity: 1;
         }
 
         nav {
@@ -75,7 +105,24 @@
     </style>
 </head>
 <body>
-    <nav>
+    <script>
+        var isNavHidden = false
+        document.addEventListener('scroll', function(e) {
+            const myNav = document.getElementById("myNav")
+
+            if (window.scrollY > 100 && isNavHidden === false) {
+                myNav.classList.add('hidden')
+                myNav.classList.remove('visible')
+                isNavHidden = true
+            } else if (window.scrollY < 100 && isNavHidden === true) {
+                myNav.classList.add('visible')
+                myNav.classList.remove('hidden')
+                isNavHidden = false
+            }
+        })
+    </script>
+
+    <nav id="myNav">
         <ul class="navigation">
             <li><a href="https://tommykw.github.io/css-tutorials/">Home</a></li>
             <li><a href="https://tommykw.github.io/css-tutorials/">Studies</a></li>
