@@ -11,28 +11,32 @@
     <script>
         var isNavHidden = false
         document.addEventListener('scroll', function(e) {
-            const myNav = document.getElementById("myNav")
+            const header = document.getElementById("navHeader")
 
             if (window.scrollY > 100 && isNavHidden === false) {
-                myNav.classList.add('hidden')
-                myNav.classList.remove('visible')
+                header.classList.add('hidden')
+                header.classList.remove('visible')
                 isNavHidden = true
             } else if (window.scrollY < 100 && isNavHidden === true) {
-                myNav.classList.add('visible')
-                myNav.classList.remove('hidden')
+                header.classList.add('visible')
+                header.classList.remove('hidden')
                 isNavHidden = false
             }
         })
     </script>
 
-    <nav id="myNav">
-        <ul class="navigation">
-            <li><a href="https://tommykw.github.io/css-tutorials/">Home</a></li>
-            <li><a href="https://tommykw.github.io/css-tutorials/">Studies</a></li>
-            <li><a href="https://tommykw.github.io/css-tutorials/">Post</a></li>
-            <li><a href="https://tommykw.github.io/css-tutorials/">Latest</a></li>
-        </ul>
-    </nav>
+    <header id="navHeader">
+        <div class="navHeaderLeft">
+            <a href="">Dev</a>
+        </div>
+        <nav class="navHeaderRight">
+            <ul class="navigation">
+                <li><a href="https://tommykw.github.io/css-tutorials/">Posts</a></li>
+                <li><a href="https://tommykw.github.io/css-tutorials/">Snippets</a></li>
+                <li><a href="https://tommykw.github.io/css-tutorials/">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="main">
         <div class="item1">

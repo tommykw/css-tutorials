@@ -22,27 +22,44 @@ body {
     }
 }
 
-#myNav.hidden {
+#navHeader.hidden {
     animation: fadeout 0.5s linear;
     opacity: 0;
 }
 
-#myNav.visible {
+#navHeader.visible {
     animation: fadein 0.5s linear;
     opacity: 1;
 }
 
-nav {
+header {
     position: sticky;
-    background: blueviolet;
-    top: 0;
-    right: 0;
-    left: 0;
+    background: #FFF;
+    display: flex;
+    justify-content: left;
+}
+
+.navHeaderLeft {
+    margin: 3rem 0 2rem 2rem;
+}
+
+.navHeaderLeft a {
+    border-radius: 3px;
+    padding: 1.2rem;
+    background: black;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.navHeaderRight {
 }
 
 .navigation {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin: 0;
 }
 
 .navigation li {
@@ -50,11 +67,11 @@ nav {
 }
 
 .navigation a {
-    margin: 2rem;
+    margin: 3rem 2rem 2rem 2rem;
     border-radius: 3px;
     display: block;
-    background: #ffffff;
-    padding: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
     text-decoration: none;
     color: #000;
 }
